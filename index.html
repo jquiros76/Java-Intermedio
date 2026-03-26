@@ -139,7 +139,16 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 <div class="wrap">
 
 <header class="hero">
-  <img src="https://digitalworldwide.net/logo.png" alt="Ruta360">
+  python3 - <<'EOF'
+with open('/tmp/logo_b64.txt','r') as f:
+    b64 = f.read().strip()
+with open('/home/claude/java-level2.html','r') as f:
+    c = f.read()
+c = c.replace('LOGO_SRC', f'data:image/jpeg;base64,{b64}')
+with open('/mnt/user-data/outputs/java-nivel2-intermedio.html','w') as f:
+    f.write(c)
+print("Level 2 done:", len(c), "bytes")
+EOF
   <div class="level-badge">☕ JAVA · NIVEL 2 · INTERMEDIO</div>
   <h1>Programación<br><span>Orientada a Objetos</span></h1>
   <p>Clases, objetos, encapsulamiento, herencia, polimorfismo, interfaces, colecciones y manejo de excepciones.</p>
